@@ -42,7 +42,7 @@ def setup_package():
         tests_require=["pytest"],
         keywords="spatial statistics",
         classifiers=[
-            "Development Status :: 5 - Production/Stable",
+            "Development Status :: 3 - Alpha",
             "Intended Audience :: Science/Research",
             "Intended Audience :: Developers",
             "Intended Audience :: Education",
