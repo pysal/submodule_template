@@ -1,0 +1,9 @@
+name: test
+channels:
+  - conda-forge
+dependencies:
+  - python=3.6
+  # testing
+  - pytest
+  - pytest-cov
+  - codecov
