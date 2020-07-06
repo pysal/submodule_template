@@ -1,3 +1,15 @@
+# Unittests for PACKAGE_NAME
+#
+# Notes:
+#   - Uncomment evertything below these notes to enable workflow.
+#   - `timeout-minutes` may need to be updated depanding on how long the tests should take.
+#   - Additional environments can be defined in the ./ci/ directory and added to the `environment-file` list.
+#   - Swap PACKAGE_NAME for the actual package name.
+#   - Codecov must be enabled for the repo.
+#   - Within the project repo, navigate to Setting/Secrets to set `secrets.CODECOV_TOKEN`.
+#
+# -------------------------------------------------------
+
 on:
   push:
     branches:
