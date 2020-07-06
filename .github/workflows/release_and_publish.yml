@@ -1,4 +1,11 @@
  # Release package on GitHub and publish to PyPI
+ 
+ # Important: In order to trigger this workflow for the organization
+ # repo (organzation-name/repo-name vs. user-name/repo-name), a tagged
+ # commit must be made to *organzation-name/repo-name*. If the tagged
+ # commit is made to *user-name/repo-name*, a release will be published
+ # under the user's name, not the organzation.
+ 
  #--------------------------------------------------
  name: release_and_publish
 
