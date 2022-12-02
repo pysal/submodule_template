@@ -2,8 +2,13 @@ name: test
 channels:
   - conda-forge
 dependencies:
-  - python=3.7
+  - python=3.10
   # testing
   - pytest
   - pytest-cov
   - codecov
+  # formatting / linting
+  - black
+  - flake8
+  - isort
+  - pyflakes

@@ -7,3 +7,8 @@ dependencies:
   - pytest
   - pytest-cov
   - codecov
+  # formatting / linting
+  - black
+  - flake8
+  - isort
+  - pyflakes
