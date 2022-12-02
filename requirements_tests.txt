@@ -3,7 +3,6 @@ codecov
 flake8
 isort
 matplotlib
-pyflakes
 pytest
 pytest-cov
 watermark

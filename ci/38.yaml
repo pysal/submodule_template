@@ -11,4 +11,3 @@ dependencies:
   - black
   - flake8
   - isort
-  - pyflakes
