@@ -56,7 +56,7 @@ docs = [
     "sphinx_bootstrap_theme",
 ]
 tests = [
-    "codecov"
+    "codecov",
     "coverage",
     "pytest",
     "pytest-cov",
