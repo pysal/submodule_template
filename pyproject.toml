@@ -1,0 +1,97 @@
+[build-system]
+requires = [
+    "black",
+    "isort",
+    "pyproject-flake8",
+    "setuptools>=61.0.0",
+    "versioneer[toml]",
+]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "PACKAGE_NAME"
+dynamic = ["version"]
+maintainers = [
+    {name = "MAINTAINER_NAME", email = "MAINTAINER_EMAIL@gmail.com"},
+]
+license = {text = "BSD 3-Clause"}
+description = "short <80chr description"
+keywords = ["some", "key", "words"]
+readme = {text = """\
+Longer description; can be from README.md
+""", content-type = "text/x-rst"}
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.8",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "License :: OSI Approved :: BSD License",
+    "Operating System :: OS Independent",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: GIS",
+]
+requires-python = ">=3.8"
+dependencies = [
+    "numpy>=1.3",
+    "pandas>=1.0",
+    "scipy>=1.0",
+]
+
+[project.urls]
+Home = "https://pysal.org/PACKAGE_NAME/"
+Repository = "https://github.com/pysal/PACKAGE_NAME"
+
+[project.optional-dependencies]
+dev = [
+    "black",
+    "pre-commit",
+    "ruff",
+]
+docs = [
+    "nbsphinx",
+    "numpydoc",
+    "sphinx",
+    "sphinxcontrib-bibtex",
+    "sphinx_bootstrap_theme",
+]
+tests = [
+    "codecov"
+    "coverage",
+    "pytest",
+    "pytest-cov",
+    "pytest-xdist",
+]
+plus = [  # this section can have any name desired; there can be any number of them
+    "ANY_OTHER_OPTIONAL_PACKAGES"
+]
+
+[tool.setuptools.packages.find]
+include = [
+    "spaghetti",
+    "spaghetti.*",
+]
+
+[tool.coverage.run]
+omit = ["PACKAGE_NAME/test_*"]
+source = ["PACKAGE_NAME"]
+
+[tool.coverage.report]
+ignore_errors = true
+omit = ["PACKAGE_NAME/test_*"]
+
+[tool.ruff]
+line-length = 88
+select = ["E", "F", "W", "I", "UP", "N", "B", "A", "C4", "SIM", "ARG"]
+exclude = ["PACKAGE_NAME/test_*", "docs/*"]
+target-version = "py38"
+ignore = ["B006"]
+
+[tool.black]
+line-length = 88
+extend-exclude = '''
+(
+  docs/*
+)
+'''
+

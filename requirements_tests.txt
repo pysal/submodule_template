@@ -1,8 +1,0 @@
-black
-codecov
-flake8
-isort
-matplotlib
-pytest
-pytest-cov
-watermark
