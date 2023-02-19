@@ -1,10 +1,6 @@
 [build-system]
 requires = [
-    "black",
-    "isort",
-    "pyproject-flake8",
-    "setuptools>=61.0.0",
-    "versioneer[toml]",
+    "setuptools>=61.0.0", "setuptools_scm[toml]>=6.2"
 ]
 build-backend = "setuptools.build_meta"
 
@@ -68,8 +64,8 @@ plus = [  # this section can have any name desired; there can be any number of t
 
 [tool.setuptools.packages.find]
 include = [
-    "spaghetti",
-    "spaghetti.*",
+    "PACKAGE_NAME",
+    "PACKAGE_NAME.*",
 ]
 
 [tool.coverage.run]
@@ -82,7 +78,19 @@ omit = ["PACKAGE_NAME/test_*"]
 
 [tool.ruff]
 line-length = 88
-select = ["E", "F", "W", "I", "UP", "N", "B", "A", "C4", "SIM", "ARG"]
+select = [  # ruff's rule codes -- https://beta.ruff.rs/docs/rules/
+    "F",  # flake8/pyflake; required
+    "I",  # isort; required
+    "UP",  # upgrade checking; required
+    "A",  # builtins; optional but strongly encouraged
+    "ARG",  # unused arguments; optional but strongly encouraged
+    "E",  # errors; optional but strongly encouraged
+    "N",  # pep8 naming; optional but strongly encouraged
+    "W",  # warnings; optional but strongly encouraged
+    "B",  # bugbear; optional
+    "C4",  # comprehensions; optional
+    "SIM",  # simplify; optional
+]
 exclude = ["PACKAGE_NAME/test_*", "docs/*"]
 target-version = "py38"
 ignore = ["B006"]
