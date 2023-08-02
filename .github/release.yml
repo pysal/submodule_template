@@ -1,0 +1,28 @@
+changelog:
+  exclude:
+    labels:
+      - ignore-for-release
+    authors:
+      - dependabot
+  categories:
+    - title: Bug Fixes
+      labels:
+        - bug
+    - title: Enhancements
+      labels:
+        - enhancement
+    - title: LABEL_TITLE_1
+      labels:
+        - LABEL_1
+    - title: LABEL_TITLE_2
+      labels:
+        - LABEL_2
+    - title: LABEL_TITLE_3
+      labels:
+        - LABEL_3
+    - title: LABEL_TITLE_999
+      labels:
+        - LABEL_999
+    - title: Other Changes
+      labels:
+        - "*"
